@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Donation Selection</title>
+    <link rel="stylesheet" href="/styles_3.css">
+</head>
+<body>
+
+<div class="donation-container">
+    <h1>Welcome <span><%= username %></span></h1>
+    <h2>What do you want to donate?</h2>
+
+    <div class="btn-container">
+        <!-- Add guest query parameter to bypass login -->
+        <a href="/donate/stationary?guest=true" class="donate-btn">Stationary</a>
+        <a href="/donate/clothes?guest=true" class="donate-btn">Clothes</a>
+    </div>
+
+    <div class="btn-center">
+        <a href="/donate/accessories?guest=true" class="donate-btn">Home Accessories</a>
+    </div>
+
+    <div class="logout-container">
+        <a href="/" class="logout-btn">Back to Home</a>
+    </div>
+
+</div>
+
+</body>
+</html>

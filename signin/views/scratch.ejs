@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Coupon</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Congratulations! You've won a Coupon! 🎉</h1>
+        
+        <div class="coupon-box">
+            <img src="<%= imageUrl %>" alt="Coupon Image" class="coupon-img">
+            <p><strong>Code:</strong> <%= couponCode %></p>
+            <p><%= description %></p>
+        </div>
+
+        <a href="/" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>

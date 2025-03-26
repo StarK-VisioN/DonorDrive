@@ -1,0 +1,224 @@
+/* Global Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Background with Gradient */
+.donation-container {
+    background: linear-gradient(135deg, #3d0c0c, #7b1e1e);  
+    color: #f1c40f;      
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Heading Styles */
+.donation-container h1 {
+    font-size: 3rem;
+    color: #f1c40f;
+    margin-bottom: 10px;
+    animation: fadeInDown 0.8s ease-in-out;
+}
+
+.donation-container h1 span {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.donation-container h2 {
+    font-size: 2rem;
+    color: #f1c40f;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Button Container */
+.btn-container, .btn-center {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+/* Button Styles */
+.donate-btn {
+    text-decoration: none;
+    background: #e0e0e0;
+    color: #333;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+/* Button Hover Effect */
+.donate-btn:hover {
+    background: #f1c40f;
+    color: #3d0c0c;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.donate-btn:active {
+    transform: translateY(0);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Styling */
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #3d0c0c;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color: #f1c40f;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+/* Input Focus Effect */
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #f1c40f;
+    box-shadow: 0 0 8px rgba(241, 196, 15, 0.8);
+}
+
+/* Form Button Styling */
+button {
+    background: #f1c40f;
+    color: #3d0c0c;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #e67e22;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donation-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .donation-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .donate-btn {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+
+    .form-container {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .donation-container h1 {
+        font-size: 2rem;
+    }
+
+    .donation-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .donate-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}
+
+
+/* Back to Home Button Styling */
+.logout-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.logout-btn {
+    text-decoration: none;
+    color: white;                   /* White color */
+    background: #3d0c0c;             /* Dark background */
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect */
+.logout-btn:hover {
+    background: #f1c40f;             /* Yellow background */
+    color: #3d0c0c;                   /* Dark text on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.logout-btn:active {
+    transform: translateY(0);
+}

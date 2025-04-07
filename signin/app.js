@@ -199,13 +199,27 @@ app.post('/submit-donor-details', (req, res) => {
 app.get('/thankyou/:donationId', (req, res) => {
     const donationId = req.params.donationId;
 
-    if (!donationId) {
+    if (!donationId || isNaN(donationId)) {
         return res.status(400).send('Invalid donation ID');
     }
 
     const username = req.session.user ? req.session.user.username : 'Guest';
-    res.render('thankyou', { username, donationId });
+
+    const checkQuery = 'SELECT * FROM donations WHERE id = ?';
+    db.query(checkQuery, [donationId], (err, results) => {
+        if (err) {
+            console.error('Error validating donation:', err);
+            return res.status(500).send('Server error');
+        }
+
+        if (results.length === 0) {
+            return res.status(404).send('Donation not found');
+        }
+
+        res.render('thankyou', { username, donationId });
+    });
 });
+
 
 // Scratch coupon route with images
 app.get('/scratch', (req, res) => {
